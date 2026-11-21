@@ -1,0 +1,41 @@
+:root{--bg:#0b1116;--panel:#111a21;--panel2:#0e151b;--line:#1f2d38;--txt:#d7e3ea;--mut:#7d93a1;--acc:#35e0a1;--warn:#ffb454;--bad:#ff6b6b;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--sans:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--sans);font-size:14px;line-height:1.45}
+.top{padding:18px 22px 10px;border-bottom:1px solid var(--line)}
+.brand{font-size:22px;letter-spacing:.14em;font-weight:800}.brand b{color:var(--acc)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--acc);margin-right:8px;box-shadow:0 0 10px var(--acc)}
+.sub{color:var(--mut);margin-top:2px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding:14px 22px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.kpi .v{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--acc)}
+.kpi .l{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.method-line{margin:0 22px 12px;background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:6px;padding:10px 14px;font-family:var(--mono);font-size:12.5px}
+.controls{display:flex;gap:8px;align-items:center;padding:0 22px 12px;flex-wrap:wrap}
+.controls input,.controls select{background:var(--panel);color:var(--txt);border:1px solid var(--line);border-radius:6px;padding:7px 9px;font-size:13px}
+.controls input[type=search]{min-width:220px}.count{margin-left:auto;color:var(--mut);font-family:var(--mono);font-size:12px}
+.chk{color:var(--mut);font-size:13px}
+main{padding:0 22px}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.07em;cursor:pointer;user-select:none}
+th:hover{color:var(--txt)}td.num,th.num{font-family:var(--mono);text-align:right}
+tr:hover td{background:#15222c}tr.sel td{background:#122b23}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.pill{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700}
+.pill.FARM{background:#0f3d2b;color:var(--acc)}.pill.THIN{background:#3d2f0f;color:var(--warn)}.pill.SKIP{background:#3d1515;color:var(--bad)}
+.wl{color:var(--warn);font-size:11px;font-weight:700}
+.detail{margin:16px 22px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+.detail h2{margin:0 0 4px;font-size:20px}.detail h3{margin:16px 0 6px;font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.07em}
+.detail .factors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0}
+.factor{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.factor .v{font-family:var(--mono);font-size:16px;font-weight:700}.factor .l{color:var(--mut);font-size:11px}
+.factor .d{color:var(--mut);font-size:11px;margin-top:2px}
+.steps{list-style:none;margin:0;padding:0}.steps li{padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
+.steps li:last-child{border-bottom:0}.steps .c{float:right;font-family:var(--mono);color:var(--acc);font-size:12px}
+.totals{font-family:var(--mono);margin-top:8px}.totals b{color:var(--acc)}
+.method,.anchors,.excluded{margin:18px 22px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+.method h2,.anchors h2,.excluded h2{margin:0 0 8px;font-size:16px}
+.method table{border:0;background:transparent}.method th{cursor:default}
+.method td,.method th{border-bottom:1px solid var(--line)}
+.small{color:var(--mut);font-size:12px}
+footer{padding:8px 22px 22px;color:var(--mut);font-size:12px}
+.tag{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:1px 6px;font-family:var(--mono);font-size:11px;margin:1px 2px}

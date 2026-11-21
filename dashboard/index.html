@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar v2 — Pre-Token Launch Radar</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="dot"></span>TOKEN RADAR <b>v2</b></div>
+  <div class="sub">Which pre-token protocol is worth farming next — and what to do about it.</div>
+</header>
+
+<section class="kpis" id="kpis"></section>
+
+<section class="method-line" id="methodLine"></section>
+
+<section class="controls">
+  <input id="q" type="search" placeholder="Search protocol…" aria-label="Search protocol">
+  <select id="fCat" aria-label="Filter by category"><option value="">All categories</option></select>
+  <select id="fChain" aria-label="Filter by chain"><option value="">All chains</option></select>
+  <select id="fVerdict" aria-label="Filter by verdict">
+    <option value="">All verdicts</option><option>FARM</option><option>THIN</option><option>SKIP</option>
+  </select>
+  <label class="chk"><input id="fWatch" type="checkbox"> Watchlist only</label>
+  <span class="count" id="rowCount"></span>
+</section>
+
+<main>
+  <table id="board">
+    <thead><tr>
+      <th data-sort="rank">#</th><th data-sort="name">Protocol</th><th data-sort="category">Category</th>
+      <th>Chains</th><th data-sort="tvl_usd">TVL</th><th data-sort="multiple">Multiple</th>
+      <th data-sort="p_launch">P(launch)</th><th data-sort="implied_value_usd">Implied value</th>
+      <th>Rank range</th><th data-sort="verdict">Verdict</th><th data-sort="farm_cost_usd">Farm cost</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+</main>
+
+<section id="detail" class="detail" hidden></section>
+
+<section class="method" id="methodSection">
+  <h2>How the value is fitted — and tested</h2>
+  <div id="methodBody"></div>
+</section>
+
+<section class="anchors">
+  <h2>Traded-token anchors — the comps the multiple is fitted on</h2>
+  <div id="anchorBody"></div>
+</section>
+
+<section class="excluded">
+  <h2>Recorded as pre-token but not ranked — and why</h2>
+  <div id="excludedBody"></div>
+</section>
+
+<footer>
+  <p>Snapshot: DefiLlama protocol data as of <span id="snapDate"></span>. A protocol
+  "records no token" in the snapshot — that is a record, not proof it has none.
+  Implied values are this radar's own claim, never a prediction of a launch.
+  Not financial advice — do your own research, never farm with money you cannot lose.</p>
+</footer>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
