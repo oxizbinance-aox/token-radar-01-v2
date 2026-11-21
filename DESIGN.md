@@ -53,7 +53,7 @@ token-recorded but with no usable market cap, mcap 0 or negative).
   then swap. Variants compared on median absolute log-error: flat global
   median, flat category median, curve x category. The dashboard prints all
   three errors for both directions and keeps the winner. Prototype numbers:
-  curve wins both directions (1.55 / 0.92) vs flat (1.70 / 1.64).
+  curve wins both directions (1.293 / 1.073) vs flat (1.632 / 1.699).
 - **P(launch) — token odds from the peers' record.** Base = the category's
   token rate (live / all in category), shrunk toward the global token rate
   (129/758 = 0.170) with pseudo-count 5. Adjusted by no-token age
